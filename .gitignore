@@ -1,0 +1,50 @@
+# Временные файлы, каталоги и компилированные файлы для проектов Java
+
+*.class
+*.jar
+*.war
+*.ear
+
+# Директории IDE и проектные файлы
+.vscode/
+.idea/
+*.iml
+
+# Система сборки Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Система сборки Gradle
+.gradle/
+build/
+out/
+
+# Логи
+*.log
+
+# Кэш IntelliJ
+.idea/
+
+# Кэш Eclipse
+.project
+.classpath
+.c9/
+.settings/
+bin/
+tmp/
+
+# Кэш NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Скрытые файлы и временные директории операционной системы
+.DS_Store
+Thumbs.db
