@@ -1,13 +1,13 @@
 ## Итоговая контрольная работа
 1. Используя команду cat в терминале операционной системы Linux, создать два файла Домашние животные (заполнив файл собаками, кошками, хомяками) и Вьючные животными заполнив файл Лошадьми, верблюдами и ослы), а затем объединить их. Просмотреть содержимое созданного файла. Переименовать файл, дав ему новое имя (Друзья человека). 
 2. Создать директорию, переместить файл туда.
-![2 задание](https://github.com/Zorrki/Control/Screens/blob/main/1_2.png?raw=true)
+![2 задание](https://github.com/Zorrki/Control/blob/main/Screens/1_2.png?raw=true)
 3. Подключить дополнительный репозиторий MySQL. Установить любой пакет из этого репозитория.
-![3 задание](https://github.com/Zorrki/Control/Screens/blob/main/3.png?raw=true)
-![3 задание](https://github.com/Zorrki/Control/Screens/blob/main/3_1.png?raw=true)
+![3 задание](https://github.com/Zorrki/Control/blob/main/Screens/3.png?raw=true)
+![3 задание](https://github.com/Zorrki/Control/blob/main/Screens/3_1.png?raw=true)
 4. Установить и удалить deb-пакет с помощью dpkg.
-![4 задание](https://github.com/Zorrki/Control/Screens/blob/main/4.png?raw=true)
-![4 задание](https://github.com/Zorrki/Control/Screens/blob/main/4_1.png?raw=true)
+![4 задание](https://github.com/Zorrki/Control/blob/main/Screens/4.png?raw=true)
+![4 задание](https://github.com/Zorrki/Control/blob/main/Screens/4_1.png?raw=true)
 5. Выложить историю команд в терминале ubuntu
 ```
       310  mkdir Control
@@ -53,7 +53,7 @@
       350  history
 ```
 6. Нарисовать [диаграмму](https://drive.google.com/file/d/1OpnFGyM6d6wxuNl3QNw0fpAk4WiFN5n4/view?usp=sharing), в которой есть класс родительский класс, домашние животные и вьючные животные, в составы которых в случае домашних животных войдут классы: собаки, кошки, хомяки, а в класс вьючные животные войдут: Лошади, верблюды и ослы).
-![6 задание](https://github.com/Zorrki/Control/Screens/blob/main/6.png?raw=true)
+![6 задание](https://github.com/Zorrki/Control/blob/main/Screens/6.png?raw=true)
 7. В подключенном MySQL репозитории создать базу данных “Друзья человека”
 ```
 CREATE DATABASE Human_friends;
@@ -97,7 +97,7 @@ VALUES ('Кошки', 2),
 ('Собаки', 2),  
 ('Хомяки', 2);
 ```
-![8 задание](https://github.com/Zorrki/Control/Screens/blob/main/8_1.jpg?raw=true)
+![8 задание](https://github.com/Zorrki/Control/blob/main/Screens/8_1.jpg?raw=true)
 
 9. Заполнить низкоуровневые таблицы именами(животных), командами которые они выполняют и датами рождения
 ```CREATE TABLE cats 
@@ -190,8 +190,8 @@ VALUES ('Горбатый', '2022-04-10', 'вернись', 3),
 ('Сифон', '2015-07-12', "повернись", 3), 
 ('Борода', '2022-12-10', "улыбнись", 3);
 ``` 
-![9 задание](https://github.com/Zorrki/Control/Screens/blob/main/9.jpg?raw=true)
-![9 задание](https://github.com/Zorrki/Control/Screens/blob/main/9_1.jpg?raw=true)
+![9 задание](https://github.com/Zorrki/Control/blob/main/Screens/9.jpg?raw=true)
+![9 задание](https://github.com/Zorrki/Control/blob/main/Screens/9_1.jpg?raw=true)
 
 10. Удалив из таблицы верблюдов, т.к. верблюдов решили перевезти в другой питомник на зимовку. Объединить таблицы лошади, и ослы в одну таблицу.
 ```SET SQL_SAFE_UPDATES = 0;
@@ -200,7 +200,7 @@ DELETE FROM camels;
 SELECT Name, Birthday, Commands FROM horses
 UNION SELECT  Name, Birthday, Commands FROM donkeys;
 ```
-![10 задание](https://github.com/Zorrki/Control/Screens/blob/main/10.jpg?raw=true)
+![10 задание](https://github.com/Zorrki/Control/blob/main/Screens/10.jpg?raw=true)
 
 11. Создать новую таблицу “молодые животные” в которую попадут все животные старше 1 года, но младше 3 лет и в отдельном столбце с точностью до месяца подсчитать возраст животных в новой таблице
 ```CREATE TEMPORARY TABLE animals AS 
@@ -216,7 +216,7 @@ FROM animals WHERE Birthday BETWEEN ADDDATE(curdate(), INTERVAL -3 YEAR) AND ADD
  
 SELECT * FROM yang_animal;
 ```
-![11 задание](https://github.com/Zorrki/Control/Screens/blob/main/11.jpg?raw=true)
+![11 задание](https://github.com/Zorrki/Control/blob/main/Screens/11.jpg?raw=true)
 
 12. Объединить все таблицы в одну, при этом сохраняя поля, указывающие на прошлую принадлежность к старым таблицам.
 ```SELECT h.Name, h.Birthday, h.Commands, pa.Genus_name, ya.Age_in_month 
@@ -244,7 +244,7 @@ FROM hamsters hm
 LEFT JOIN yang_animal ya ON ya.Name = hm.Name
 LEFT JOIN home_animals ha ON ha.Id = hm.Genus_id;
 ```
-![12 задание](https://github.com/Zorrki/Control/Screens/blob/main/12.jpg?raw=true)
+![12 задание](https://github.com/Zorrki/Control/blob/main/Screens/12.jpg?raw=true)
 
 13.  Создать [класс с Инкапсуляцией](https://github.com/Zorrki/Control/tree/main/Program/src/Model) методов и наследованием по диаграмме
 
